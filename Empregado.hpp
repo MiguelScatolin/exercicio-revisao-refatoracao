@@ -10,6 +10,7 @@ class Empregado {
     double salarioHora;
     std::string nome;
 
+    Empregado(std::string nome, double salarioHora);
     double pagamentoMes(double horasTrabalhadas);
 
 };

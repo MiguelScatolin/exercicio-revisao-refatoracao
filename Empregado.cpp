@@ -15,3 +15,6 @@ double Empregado::pagamentoMes(double horasTrabalhadas)
   }
   return t * salarioHora;
 }
+
+
+Empregado::Empregado(std::string nome, double salarioHora) : nome(nome), salarioHora(salarioHora) {}
