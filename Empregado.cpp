@@ -2,6 +2,8 @@
 
 const int HORAS_PADRAO = 8;
 
+Empregado::Empregado(std::string nome, double salarioHora) : nome(nome), salarioHora(salarioHora) {}
+
 double Empregado::pagamentoMes(double horasTrabalhadas)
 {
 
@@ -16,5 +18,15 @@ double Empregado::pagamentoMes(double horasTrabalhadas)
   return t * salarioHora;
 }
 
+void Empregado::printNome() {
+  std::cout << "Nome: " << nome << std::endl;
+}
 
-Empregado::Empregado(std::string nome, double salarioHora) : nome(nome), salarioHora(salarioHora) {}
+void Empregado::printSalarioMes(double horasTrabalhadas) {
+  std::cout << "Salario Mes: " << pagamentoMes(horasTrabalhadas) << std::endl;
+}
+
+void Empregado::print(double horasTrabalhadas) {
+  printNome();
+  printSalarioMes(horasTrabalhadas);
+}

@@ -1,6 +1,6 @@
 CC=g++
 CFLAGS=-I.
-DEPS = Empregado.hpp
+DEPS = Empregado.hpp Vendedor.hpp Engenheiro.hpp
 OBJ = main.o Empregado.o Vendedor.o Engenheiro.o
 
 %.o: %.c $(DEPS)

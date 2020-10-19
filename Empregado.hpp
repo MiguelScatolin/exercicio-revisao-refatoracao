@@ -6,12 +6,16 @@
 
 class Empregado {
 
-  public:
+  protected:
+    Empregado(std::string nome, double salarioHora);
+    void print(double horasTrabalhadas);
+
+  private:
     double salarioHora;
     std::string nome;
-
-    Empregado(std::string nome, double salarioHora);
     double pagamentoMes(double horasTrabalhadas);
+    void printNome();
+    void printSalarioMes(double horasTrabalhadas);
 
 };
 

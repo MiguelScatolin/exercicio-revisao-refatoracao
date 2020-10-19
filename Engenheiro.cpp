@@ -1,10 +1,11 @@
 #include <string>
 #include "Empregado.hpp"
+#include "Engenheiro.hpp"
 
-class Engenheiro : public Empregado {
+Engenheiro::Engenheiro(std::string nome, double salarioHora, int projetos) : Empregado(nome, salarioHora), projetos(projetos) {}
 
-  public:
-    int projetos;
-
-    Engenheiro(std::string nome, double salarioHora, int projetos) : Empregado(nome, salarioHora), projetos(projetos) {}
-};
+void Engenheiro::print(double horasTrabalhadas) {
+  Empregado::print(horasTrabalhadas);
+  std::cout << "Projetos: " << projetos << std::endl;
+  std::cout << std::endl;
+}
